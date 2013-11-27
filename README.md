@@ -4,7 +4,7 @@
 
 With the UvA courses app, users are able to 'shop' for courses at the University of Amsterdam
 
-#*Features:*
+###*Features:*
 1. MODELS: 
         * users' database so users are able to login and retrieve the courses they are enrolled for (showed in the home page feed)
         * enrolled courses database linked to the users' database with a user ID
@@ -27,7 +27,7 @@ With the UvA courses app, users are able to 'shop' for courses at the University
        * 'relationships' controller to link courses users are enrolled for back to their user ID
        * something to handle the temporary storage of the users' shopping basket
              
-#*Frameworks, languages, libraries or other technologies:*
+###*Frameworks, languages, libraries or other technologies:*
 * Ruby on Rails for the basic implementation
 * HTML and CSS for layout and styling (might use a library like Bootstrap or any other libraries I come up with after further research)
 * SQLite for any database actions
