@@ -1,0 +1,14 @@
+<% provide(:title, 'UvA courses') %>
+
+<div data-role="page">
+  <div data-role="header">
+    <h1>UvA courses</h1>
+  </div>
+  
+           <div data-role="content">      
+               <ul data-role="listview" data-inset="true" data-dividertheme="b"> 
+                    <li data-role="list-divider">UvA courses</li>
+                    <li><%= link_to "Browse courses",  browse_path %></li>r
+      				<li><%= link_to "My courses", courses_path %></li>
+               </ul>           
+         </div> 

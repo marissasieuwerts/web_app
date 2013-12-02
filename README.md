@@ -5,6 +5,7 @@
 With the UvA courses app, users are able to 'shop' for courses at the University of Amsterdam
 
 ###*Features:*
+
 1. MODELS: 
         * users' database so users are able to login and retrieve the courses they are enrolled for (showed in the home page feed)
         * enrolled courses database linked to the users' database with a user ID
