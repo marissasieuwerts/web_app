@@ -1,0 +1,26 @@
+<% provide(:title, 'Sign in') %>
+
+<center><h1>Sign in</h1></center>  
+
+<p align="center">
+	<a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slidedown" data-theme="a">New user?</a>
+ 	<div data-role="popup" id="popupMenu" data-theme="c">
+    	<ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="c">
+        	<li data-role="divider" data-theme="c"></li>
+        	<li><%= link_to "Sign up", signup_path %></li>
+    	</ul>
+	</div>
+</p>
+
+<div align="center" style="width: 60%; margin: 200px auto;">
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+    <% end %>
+</div>
