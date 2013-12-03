@@ -6,27 +6,27 @@ With the UvA courses app, users are able to 'shop' for courses at the University
 
 ###*Features:*
 
-1. MODELS: 
-        * users' database so users are able to login and retrieve the courses they are enrolled for (showed in the home page feed)
-        * enrolled courses database linked to the users' database with a user ID
-        * courses database listing the available courses in general
-        * temporary database 'shopping basket' don't really have a clue how to implement this yet
-        
-2. VIEWS: 
-       * sign up page, a user needs to sign up with their student ID number, a password and their email
-	   * sign in page
-	   * home page listing a 'feed' to show what courses a logged-in user has enrolled for (with a delete option to drop the course)
-	   * search page wherein users are able to retrieve the available courses and put them in a shopping basket
-	   * 'shopping basket' wherein picked courses are temporarily stored until 'checkout'
-	   * show succesfull actions like sign in, enroll or drop courses with a flash message
+## Classes and methods
+
+1. Models 
+	* Users database so users are able to login and retrieve the courses they are enrolled for (showing in the home page feed)
+	* Enrolled courses database linked to the users' database with a user ID
+	* Shoppingcart database listing the courses the user is currently shopping for
+
+2. Views
+	* Sign up page, a user needs to sign up with their student ID number, a password and their email
+	* Sign in page
+	* Home page listing a 'feed' to show what courses a logged-in user has enrolled for (with a delete option to drop the course)
+	* Search page wherein users are able to retrieve the available courses and put them in a shopping basket
+	* 'Shopping basket' wherein picked courses are stored until 'checkout'
 	   
-3. CONTROLLERS: 
-       * user controller to handle logins, sign out, sign up, any changes in enrolled courses etc.
-       * static pages controller to handle static pages like home, about the app and contact
-       * sessions controller to handle user login and keep track of it using cookies
-       * enrolled courses controller to handle the courses feed at the users' homepage and any changes to it (dropping course with delete/destroy, enrolling courses)
-       * 'relationships' controller to link courses users are enrolled for back to their user ID
-       * something to handle the temporary storage of the users' shopping basket
+3. Controllers
+	* User controller to handle logins, sign out, sign up, any changes in enrolled courses etc.
+	* Static pages controller to handle static pages like home, about the app and contact
+	* Sessions controller to handle user login and keep track of it using cookies	
+	* Enrolled courses controller to handle the courses feed at the users' homepage and any changes to it (dropping course with delete/destroy, enrolling courses)
+	* 'Relationships’ controller to handle has_many and belongs_to relationships
+	* Something to handle the temporary storage of the users' shopping basket
              
 ###*Frameworks, languages, libraries or other technologies:*
 * Ruby on Rails for the basic implementation
