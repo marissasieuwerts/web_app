@@ -5,7 +5,7 @@ Marissa Sieuwerts
 
 ##Database model
 
-### User object: table ‘users’
+#### User object: table ‘users’
 
 | Column name |	Datatype |
 | ----| ---- |
@@ -18,7 +18,7 @@ Marissa Sieuwerts
 ID is automatically generated to keep track of a particular user. Student number / ID and password are used to authenticate and log in. 
 
 
-### Courses I’m shopping object: table ‘Shoppingcart’
+#### Courses I’m shopping object: table ‘Shoppingcart’
 
 | Column name | Datatype |
 | ------  |  -----|
@@ -84,6 +84,8 @@ Users will be able to ‘drop’ courses in the feed on their homepages by simpl
 
 
 ## User Interface mockups
+
+![alt text](https://github.com/marissasieuwerts/web_app/blob/master/doc/Schermafbeelding%202013-12-02%20om%2021.43.35.png "Mockup1")
 
 So far I tried to work with some jQuery mobile code to style the page, the page shows listed ‘search results’.
 Didn’t get the actual routes to the pages working yet (so no screenshots) but the signin page and the other static pages  (in the footer navbar) will be similar to the ones in the sample app from the Rails tutorial
