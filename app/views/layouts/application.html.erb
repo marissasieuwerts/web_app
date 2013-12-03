@@ -2,33 +2,23 @@
 <html> 
   <head> 
        <meta charset="utf-8"> 
-       <title>UvA courses</title> 
+       <title>UvA courses| <%= yield(:title) %></title>
        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script> 
        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
        <meta name="viewport" content="width=device-width, initial-scale=1">
  </head> 
- <body> 
-    <div data-role="page" data-theme="a"> 
-         <div data-role="header"> 
-               <h1>UvA courses</h1> 
-        <%= link_to "Sign in", '#' , "data-icon" => "plus", "class" => "ui-btn-right" %>
-         </div> 
-	<div data-role="content">
-		<ul data-role="listview" data-inset="true" data-dividertheme="c"> 
-                     <li data-role="list-divider">Browse Courses</li> 
-                     <li><a href="">Course 1</a></li> 
-                     <li><a href="">Course 2</a></li> 
-                     <li><a href="">Course 3</a></li> 
-                     <li><a href="">Course 4</a></li>
-                     <li><a href="">Course 5</a></li> 
-                     <li><a href="">Course 6</a></li> 
-                     <li><a href="">Course 7</a></li> 
-                     <li><a href="">Course 8</a></li> 
-                     <li><a href="">Course 9</a></li> 
-                     <li><a href="">Course 10</a></li> 
-               </ul>      
-    </div>        
+ <body>
+ 
+ <div data-role="page">
+  <div data-role="header">
+    <h1>UvA courses</h1>
+    <%= link_to "Sign in", signin_path , "data-icon" => "plus", "class" => "ui-btn-right" %>
+    <%= link_to "Home", root_path , "data-icon" => "home", "class" => "ui-btn-left" %>
+  </div>
+
+ <%= yield %>
+ 
      <div data-role="footer" data-position="fixed">
        <div data-role="navbar">
          <ul>
@@ -38,6 +28,6 @@
     		</ul>
         </div> 
       </div>
-    </div> 
-    </body> 
-    </html>
+  </div>
+ </body> 
+</html>

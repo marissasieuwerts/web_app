@@ -1,14 +1,19 @@
 <% provide(:title, 'UvA courses') %>
 
-<div data-role="page">
-  <div data-role="header">
-    <h1>UvA courses</h1>
-  </div>
-  
-           <div data-role="content">      
-               <ul data-role="listview" data-inset="true" data-dividertheme="b"> 
-                    <li data-role="list-divider">UvA courses</li>
-                    <li><%= link_to "Browse courses",  browse_path %></li>r
-      				<li><%= link_to "My courses", courses_path %></li>
-               </ul>           
-         </div> 
+<center><h1>Home</h1></center>   
+<p>
+	<div align="center">
+		<img src="http://upload.wikimedia.org/wikipedia/commons/4/43/Logo-Universiteit-van-Amsterdam.jpg" alt="UvA Logo" width="500" ></img>
+	</div>
+</p>
+      
+<p align="center">
+	<a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slidedown" data-theme="a">Get started</a>
+ 	<div data-role="popup" id="popupMenu" data-theme="c">
+    	<ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="c">
+        	<li data-role="divider" data-theme="c">UvA courses menu</li>
+        	<li><%= link_to "Browse courses",   browse_path %></li>
+        	<li><%= link_to "My courses",   courses_path %></li>
+    	</ul>
+	</div>
+</p>

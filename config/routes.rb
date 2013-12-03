@@ -5,6 +5,9 @@ WebApp::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/browse',  to: 'static_pages#browse',  via: 'get'
   match '/courses', to: 'static_pages#courses', via: 'get'
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
