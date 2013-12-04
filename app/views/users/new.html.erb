@@ -2,7 +2,8 @@
 <center><h1>Sign Up</h1></center>  
 
 <div align="center" style="width: 60%; margin: 200px auto;">
-   <%= form_for(:session, url: sessions_path) do |f| %> 
+<%= form_for(@user) do |f| %>
+<%= render 'shared/error_messages' %>
 
       <%= f.label :student_id, "Student ID" %>
       <%= f.text_field :student_id %>

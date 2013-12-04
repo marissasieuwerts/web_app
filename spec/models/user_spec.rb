@@ -3,8 +3,8 @@ require 'spec_helper'
 describe User do
 
   before do
-    @user = User.new(student_id: "10070729",
-    				password: "foobar", password_confirmation: "foobar")
+    @user = User.new(student_id: "99999999",
+    				password: "example", password_confirmation: "example")
   end
 
   subject { @user }
