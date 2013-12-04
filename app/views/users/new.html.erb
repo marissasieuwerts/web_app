@@ -4,16 +4,13 @@
 <div align="center" style="width: 60%; margin: 200px auto;">
    <%= form_for(:session, url: sessions_path) do |f| %> 
 
-      <%= f.label :name %>
-      <%= f.text_field :name %>
-
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.label :student_id, "Student ID" %>
+      <%= f.text_field :student_id %>
 
       <%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "Password Confirmation" %>
       <%= f.password_field :password_confirmation %>
 
       <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
