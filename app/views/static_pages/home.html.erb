@@ -5,15 +5,17 @@
 	<div align="center">
 		<img src="http://upload.wikimedia.org/wikipedia/commons/4/43/Logo-Universiteit-van-Amsterdam.jpg" alt="UvA Logo" width="500" ></img>
 	</div>
+	<center>Welcome to UvA courses!</center>
 </p>
+
+<%= yield %>
       
 <p align="center">
-	<a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slidedown" data-theme="a">Get started</a>
+	<a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slidedown" data-theme="a">Sign up</a>
  	<div data-role="popup" id="popupMenu" data-theme="c">
     	<ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="c">
-        	<li data-role="divider" data-theme="c">UvA courses menu</li>
-        	<li><%= link_to "Browse courses",   browse_path %></li>
-        	<li><%= link_to "My courses",   courses_path %></li>
+        	<li data-role="divider" data-theme="c">Authentication</li>
+			<li><%= link_to "Sign up", signup_path %></li>
     	</ul>
 	</div>
 </p>

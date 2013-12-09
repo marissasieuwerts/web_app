@@ -28,9 +28,19 @@ describe "User pages" do
         fill_in "Password",     with: "example"
         fill_in "Confirmation", with: "example"
       end
+      
 
       it "should create a user" do
         expect { click_button submit }.to change(User, :count).by(1)
+      end
+      
+    describe "after saving the user" do
+        before { click_button submit }
+        let(:user) { User.find_by(student_id: '99999999') }
+
+        it { should have_link('Sign out') }
+        it { should have_title(user.student_id) }
+        it { should have_selector('div.alert.alert-success', text: 'Welcome') }
       end
     end
   end

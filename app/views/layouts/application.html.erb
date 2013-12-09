@@ -10,11 +10,18 @@
  </head> 
  <body>
  
+ <%= javascript_include_tag :all %>
+ 
  <div data-role="page">
   <div data-role="header">
     <h1>UvA courses</h1>
-    <%= link_to "Sign in", signin_path , "data-icon" => "plus", "class" => "ui-btn-right" %>
-    <%= link_to "Home", root_path , "data-icon" => "home", "class" => "ui-btn-left" %>
+    <% if signed_in? %>
+            <%= link_to "Sign out",  signout_path, :method => :delete, "data-icon" => "star", "class" => "ui-btn-right" %>
+            <%= link_to "Profile", current_user, "data-icon" => "home", "class" => "ui-btn-left" %>
+    <% else %>
+    		 <%= link_to "Home", root_path , "data-icon" => "home", "class" => "ui-btn-left" %>
+             <%= link_to "Sign in", signin_path , "data-icon" => "plus", "class" => "ui-btn-right" %>
+          <% end %>
   </div>
   
   <div class="container">

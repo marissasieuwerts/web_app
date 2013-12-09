@@ -11,7 +11,7 @@ WebApp::Application.routes.draw do
   match '/browse',  to: 'static_pages#browse',  via: 'get'
   match '/courses', to: 'static_pages#courses', via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
-  match '/signout', to: 'sessions#destroy',     via: 'delete'
+  match '/signout', to: 'sessions#destroy',     via: 'get'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
