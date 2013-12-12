@@ -1,0 +1,159 @@
+<%= link_to "Back",  courses_path, "class" => "ui-btn-inline"%>
+
+<h2><center><%= @course.name %></center></h2>
+<h3><center><%= @course.ects %>EC</center></h3>
+
+<div>
+<p align="center">
+	<a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slidedown" data-theme="a">Enroll for this course</a>
+ 	<div data-role="popup" id="popupMenu" data-theme="c">
+    	<ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="c">
+        	<li data-role="divider" data-theme="c">Take this course</li>
+			<li><%=  %></li>
+    	</ul>
+	</div>
+</p>
+</div>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Acode</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+    <%= @course.acode %>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Code</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+    <%= @course.code %>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Sgid</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+    <%= @course.sgid %>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Year</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+    <%= @course.year %>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Period</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+    <%= @course.period %>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Institute</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+    <%= @course.institute %>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Description</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+    <%= @course.description %>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Timetable</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+    <%= @course.timetable %>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Lecture Material</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+    <%= @course.lecture_material %>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Goals</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+    <%= @course.goals %>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Participant Count</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+    <%= @course.participant_count %>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Specialities</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+	<%= @course.specialities %>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Examination</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+    <%= @course.examination%>
+  </div>
+</div>
+</p>

@@ -1,0 +1,15 @@
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap-paginator.min.js"></script>
+    
+<% provide(:title, 'Browse courses') %>
+<center><h1>Browse courses</h1></center>
+
+<ul data-role="listview" data-theme="c" data-filter="true" data-filter-placeholder="Search this page" data-inset="false">
+	<% @courses.each do |course| %>
+      		<li><%= link_to course.name, course %></li>
+    <% end %>
+    <%= will_paginate %>
+</ul>
+

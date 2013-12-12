@@ -1,4 +1,6 @@
 WebApp::Application.routes.draw do
+  resources :courses
+
  get "users/new"
  resources :users
  resources :sessions, only: [:new, :create, :destroy]
