@@ -1,5 +1,30 @@
 # Web App: UvAcourses
 
+####*Update beta release Fri 13-12-2013*
+
+  1. clone repo
+  git clone git@github.com:marissasieuwerts/web_app.git alice
+
+  2. make sure all gems are there
+  cd web_app
+  bundle
+
+  3. initialize and seed database
+  rake db:setup
+  rake db:seed
+
+  4. start server
+  rails s
+
+Got a working user sign in and sign up, fixed the database (the xml file loads into SQLite tables as it is supposed to) and made it traversable in a list view.
+Furthermore applied pagination through a bootstrap plugin and added styling with jQuery mobile.
+
+Still need to work on search actions (it searches one page of the paginated list view so far) and enable the user to shop for courses or drop courses (put courses in a shopping bag and submit this into the database).
+
+Tested the mobile view on Google chromes’ Ripple emulator app.
+
+
+
 *Proposal for a Web App project for the course Web App studio*
 
 With the UvA courses app, users are able to 'shop' for courses at the University of Amsterdam
