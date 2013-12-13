@@ -3,7 +3,7 @@
 ####Update beta release Fri 13-12-2013
 
   1. clone repo
-  	* git clone git@github.com:marissasieuwerts/web_app.git alice
+  	* git clone git@github.com:marissasieuwerts/web_app.git
 
   2. make sure all gems are there
   	* cd web_app
@@ -24,8 +24,10 @@ Still need to work on search actions (it searches one page of the paginated list
 Tested the mobile view on Google chromes’ Ripple emulator app.
 
 
+……………………………………………………………………………..
 
-####*Proposal for a Web App project for the course Web App studio*
+
+###*Proposal for a Web App project for the course Web App studio*
 
 With the UvA courses app, users are able to 'shop' for courses at the University of Amsterdam
 
