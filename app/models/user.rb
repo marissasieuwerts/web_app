@@ -1,5 +1,13 @@
 class User < ActiveRecord::Base
-before_create :create_remember_token
+	has_many :courses
+	has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  	has_many :followed_courses, through: :relationships, source: :followed
+  	 has_many :reverse_relationships, foreign_key: "followed_id",
+                                   class_name:  "Relationship",
+                                   dependent:   :destroy
+  	has_many :followers, through: :reverse_relationships, source: :follower
+
+	before_create :create_remember_token
   	validates :student_id, presence: true, length: { maximum: 8 }, length: { minimum: 8 },
                     	   uniqueness: true
 	has_secure_password
@@ -12,6 +20,18 @@ before_create :create_remember_token
   	def User.encrypt(token)
     	Digest::SHA1.hexdigest(token.to_s)
   	end
+  	
+ def following?(course)
+    relationships.find_by(followed_id: course.id)
+  end
+
+  def follow!(course)
+    relationships.create!(followed_id: course.id)
+  end
+  
+ def unfollow!(course)
+    relationships.find_by(followed_id: course.id).destroy!
+  end
 
   	private
 

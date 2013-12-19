@@ -2,6 +2,10 @@
 <img src="http://memory.uva.nl/assets/images/uva-logo.png" alt="UvA Logo" width="50" ></img>
 <%= @user.student_id %></h1></center>
 
+<div data-role="page">
+	<%= render 'shared/stats' %>
+</div>
+
 <p align="center">
 	<a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slidedown" data-theme="a">Get started</a>
  	<div data-role="popup" id="popupMenu" data-theme="c">

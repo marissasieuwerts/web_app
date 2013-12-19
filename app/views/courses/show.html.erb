@@ -9,11 +9,16 @@
  	<div data-role="popup" id="popupMenu" data-theme="c">
     	<ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="c">
         	<li data-role="divider" data-theme="c">Take this course</li>
-			<li><%=  %></li>
+			<li><%= form_for(current_user.relationships.build(followed_id: @course.id)) do |f| %>
+  				<div><%= f.hidden_field :followed_id %></div>
+ 					 <%= f.submit "Follow", class: "btn btn-large btn-primary" %>
+				<% end %></li>
     	</ul>
 	</div>
 </p>
 </div>
+
+
 
 <p>
 <div class="ui-corner-all custom-corners">

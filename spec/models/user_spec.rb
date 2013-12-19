@@ -14,6 +14,11 @@ describe User do
   it { should respond_to(:password) }
   it { should respond_to:(:password_confirmation) }
   it { should respond_to:(:remember_token) }
+  it { should respond_to(:relationships) }
+  it { should respond_to(:followed_courses) }
+  it { should respond_to(:following?) }
+  it { should respond_to(:follow!) }
+  it { should respond_to(:followers) }
   
   it { should be_valid }
 
@@ -81,4 +86,33 @@ describe User do
     before { @user.save }
     its(:remember_token) { should_not be_blank }
   end
+  
+  	describe "follower methods" do
+    it { should respond_to(:follower) }
+    its(:follower) { should eq follower }
+  end
+  
+  describe "following" do
+	let(:course) { (:course) }
+    before do
+      @user.save
+      @user.follow!(course)
+    end
+    
+    describe "and unfollowing" do
+      before { @user.unfollow!(course) }
+
+      it { should_not be_following(course) }
+      its(:followed_courses) { should_not include(course) }
+    end
+
+    it { should be_following(course) }
+    its(:followed_courses) { should include(course) }
+  end
+  
+
+    describe "followed course" do
+      subject { course }
+      its(:followers) { should include(@user) }
+    end
 end
