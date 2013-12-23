@@ -1,0 +1,25 @@
+<%= link_to "Back",  courses_path, "class" => "ui-btn-inline"%>
+
+<h2><center><%= @programme.name %></center></h2>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Name:</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+   	  <%= @programme.name %>
+  </div>
+</div>
+</p>
+
+<p>
+<div class="ui-corner-all custom-corners">
+  <div class="ui-bar ui-bar-c">
+    <h3>Url:</h3>
+  </div>
+  <div class="ui-body ui-body-c">
+    <%= @programme.url %>
+  </div>
+</div>
+</p>

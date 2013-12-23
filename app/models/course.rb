@@ -1,6 +1,7 @@
 class Course < ActiveRecord::Base
-	belongs_to :user
+	attr_accessible :acode, :code, :description, :ects, :examination, :goals, :institute, :lecture_material, :name, :participant_count, :period, :sgid, :specialities, :timetable, :year
 	has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+	has_many :users, through: :relationships
 	has_many :reverse_relationships, foreign_key: "followed_id",
                                    class_name:  "Relationship",
                                    dependent:   :destroy
@@ -17,6 +18,4 @@ class Course < ActiveRecord::Base
   def unfollow!(other_user)
     relationships.find_by(follower_id: user.id).destroy!
   end
-
 end
-

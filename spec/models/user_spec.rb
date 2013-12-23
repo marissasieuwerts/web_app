@@ -110,9 +110,25 @@ describe User do
     its(:followed_courses) { should include(course) }
   end
   
-
-    describe "followed course" do
+	describe "followed course" do
       subject { course }
       its(:followers) { should include(@user) }
     end
+    
+    it "should render the user's feed" do
+        user.feed.each do |item|
+          expect(page).to have_selector("li##{item.id}", text: item.content)
+        end
+      end
+
+      describe "follower/following counts" do
+        let(:course) { (:course) }
+        before do
+          course.follow!(user)
+          visit root_path
+        end
+
+        it { should have_link("0 following", href: following_course_path(user)) }
+        it { should have_link("1 followers", href: followers_course_path(user)) }
+      end
 end

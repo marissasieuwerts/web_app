@@ -1,18 +1,22 @@
 <center><h1>
 <img src="http://memory.uva.nl/assets/images/uva-logo.png" alt="UvA Logo" width="50" ></img>
-<%= @user.student_id %></h1></center>
+<%= @user.student_id %></h1><h2>My courses</h2></center>
 
-<div data-role="page">
-	<%= render 'shared/stats' %>
-</div>
+
+<ul data-role="listview" data-theme="c" data-filter="true" data-filter-placeholder="Search this page" data-inset="false">
+  <% @courses.each do |course| %>
+    <li><%= link_to course.name, course %></li>
+  <% end %>
+</ul>
 
 <p align="center">
-	<a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slidedown" data-theme="a">Get started</a>
+	<a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slidedown" data-theme="a">Enroll for more courses</a>
  	<div data-role="popup" id="popupMenu" data-theme="c">
     	<ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="c">
         	<li data-role="divider" data-theme="c">UvA courses menu</li>
-        	<li><%= link_to "My courses",   browse_path %></li>
         	<li><%= link_to "Browse courses",   courses_path %></li>
+        	<li><%= link_to "Browse programmes",   programmes_path %></li>
     	</ul>
 	</div>
 </p>
+

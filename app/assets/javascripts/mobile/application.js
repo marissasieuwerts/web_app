@@ -13,5 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.mobile
+//= require jquery-ui
 //= require turbolinks
 //= require_directory .
+//= require_self
+//= require courses
+
+$(".search").autocomplete({
+    source: ['foo', 'food', 'four']
+});

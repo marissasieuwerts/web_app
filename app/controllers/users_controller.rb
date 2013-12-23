@@ -3,8 +3,13 @@ class UsersController < ApplicationController
   	@user = User.new
   end
   
-    def show
-    @user = User.find(params[:id])
+  def show
+  	@user = current_user
+	@courses = current_user.courses
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @user } 
+    end  
   end
   
  def create
@@ -16,6 +21,13 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+  end
+
+ def following
+    @title = "Following"
+    @user = User.find(params[:id])
+    @users = @user.followed_users.paginate(page: params[:page])
+    render 'show_follow'
   end
 
   private

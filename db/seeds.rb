@@ -40,7 +40,6 @@ require 'open-uri'
       end
   end
   
-  
       courses.css('programme').each do |node|
       children = node.children
 
