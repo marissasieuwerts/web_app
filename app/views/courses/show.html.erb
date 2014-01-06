@@ -15,7 +15,7 @@
     <h3>Acode</h3>
   </div>
   <div class="ui-body ui-body-c">
-    <%= @course.acode %>
+    <%= sanitize(@course.acode) %>
   </div>
 </div>
 </p>
@@ -26,7 +26,7 @@
     <h3>Code</h3>
   </div>
   <div class="ui-body ui-body-c">
-    <%= @course.code %>
+    <%= sanitize(@course.code) %>
   </div>
 </div>
 </p>
@@ -37,7 +37,7 @@
     <h3>Sgid</h3>
   </div>
   <div class="ui-body ui-body-c">
-    <%= @course.sgid %>
+    <%= sanitize(@course.sgid) %>
   </div>
 </div>
 </p>
@@ -48,7 +48,7 @@
     <h3>Year</h3>
   </div>
   <div class="ui-body ui-body-c">
-    <%= @course.year %>
+    <%= sanitize(@course.year) %>
   </div>
 </div>
 </p>
@@ -59,7 +59,7 @@
     <h3>Period</h3>
   </div>
   <div class="ui-body ui-body-c">
-    <%= @course.period %>
+    <%= sanitize(@course.period) %>
   </div>
 </div>
 </p>
@@ -70,7 +70,7 @@
     <h3>Institute</h3>
   </div>
   <div class="ui-body ui-body-c">
-    <%= @course.institute %>
+    <%= sanitize(@course.institute) %>
   </div>
 </div>
 </p>
@@ -81,7 +81,7 @@
     <h3>Description</h3>
   </div>
   <div class="ui-body ui-body-c">
-    <%= @course.description %>
+    <%=sanitize(@course.description) %>
   </div>
 </div>
 </p>
@@ -92,7 +92,7 @@
     <h3>Timetable</h3>
   </div>
   <div class="ui-body ui-body-c">
-    <%= @course.timetable %>
+    <%= sanitize(@course.timetable) %>
   </div>
 </div>
 </p>
@@ -103,7 +103,7 @@
     <h3>Lecture Material</h3>
   </div>
   <div class="ui-body ui-body-c">
-    <%= @course.lecture_material %>
+    <%= sanitize(@course.lecture_material) %>
   </div>
 </div>
 </p>
@@ -114,7 +114,7 @@
     <h3>Goals</h3>
   </div>
   <div class="ui-body ui-body-c">
-    <%= @course.goals %>
+    <%= sanitize(@course.goals) %>
   </div>
 </div>
 </p>
@@ -125,7 +125,7 @@
     <h3>Participant Count</h3>
   </div>
   <div class="ui-body ui-body-c">
-    <%= @course.participant_count %>
+    <%= sanitize(@course.participant_count) %>
   </div>
 </div>
 </p>
@@ -136,7 +136,7 @@
     <h3>Specialities</h3>
   </div>
   <div class="ui-body ui-body-c">
-	<%= @course.specialities %>
+	<%= sanitize(@course.specialities) %>
   </div>
 </div>
 </p>
@@ -147,7 +147,7 @@
     <h3>Examination</h3>
   </div>
   <div class="ui-body ui-body-c">
-    <%= @course.examination%>
+    <%= sanitize(@course.examination) %>
   </div>
 </div>
 </p>

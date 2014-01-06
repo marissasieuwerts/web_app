@@ -6,7 +6,16 @@
 <% provide(:title, 'Browse courses') %>
 <center><h1>Browse courses</h1></center>
 
-<ul data-role="listview" data-theme="c" data-filter="true" data-filter-placeholder="Search this page" data-inset="false">
+<div>
+	<%= form_tag '/courses', method: 'get' do%>
+    <%= text_field_tag :search, params[:search] %>
+	<div id="submit">
+    	<%= submit_tag "Search", class: "btn btn-large btn-primary", :name => nil%>
+    </div>
+<% end%>
+</div>
+
+<ul data-role="listview" data-theme="c">
 	<% @courses.each do |course| %>
       		<li><%= link_to course.name, course %></li>
     <% end %>

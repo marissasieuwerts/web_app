@@ -3,12 +3,19 @@ class CoursesController < ApplicationController
 
   # GET /courses
   # GET /courses.json
-  def index
- 	@courses = Course.paginate(:per_page => 10, :page => params[:page])
+def index
+ 	 @search = params[:search]
+  	 @courses = Course.search(@search).paginate(:per_page => 10, :page => params[:page])
 end
-
-
-
+  
+ def self.search(search)
+    if search
+      where('name LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
+  
   # GET /courses/1
   # GET /courses/1.json
   def show

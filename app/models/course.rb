@@ -18,4 +18,12 @@ class Course < ActiveRecord::Base
   def unfollow!(other_user)
     relationships.find_by(follower_id: user.id).destroy!
   end
+  
+  def self.search(search)
+    if search
+      where('name LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
 end
