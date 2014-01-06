@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	attr_accessible :student_id, :password, :password_confirmation
 	has_many :courses, through: :relationships, source: :followed
 	has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   	has_many :reverse_relationships, foreign_key: "followed_id",
@@ -29,7 +30,7 @@ class User < ActiveRecord::Base
   end
   
  def unfollow!(course)
-    relationships.find_by(followed_id: course.id).destroy!
+    relationships.find_by(id).destroy!
   end
 
   	private
