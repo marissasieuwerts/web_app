@@ -1,5 +1,32 @@
 # Web App: UvAcourses
 
+####Update final release Tue 07-01-2014!
+
+1. clone repo
+  	* git clone git@github.com:marissasieuwerts/web_app.git
+
+  2. make sure all gems are there
+  	* cd web_app
+  	* bundle
+
+  3. !!There is no need to initialize and seed the database since it is included in the Github zipfile!!
+  	* During development, when I had to download the zipfile myself, I figured that it would take too long to seed the database again and found out that it may cause problems
+
+  4. start server
+  	* rails server
+
+The final release of my web app is based on the UvAcourses project, it may differ from the actual assignment though. My app enables users to sign up and while being logged in,
+browse through all courses offered at the University of Amsterdam. Browsing through courses can be achieved manually as well as with a search bar, which handles searched 
+based on course names.
+The courses can be 'followed' i.e the user can enroll for courses. These followed courses appear in a feed on the user's personal page. 
+The user has the ability to search through these courses and drop them if desired.
+
+
+Applied pagination through a bootstrap plugin and added styling with jQuery mobile.
+
+
+Tested the mobile view on Google chromes’ Ripple emulator app.
+
 ####Update beta release Fri 13-12-2013
 
   1. clone repo
